@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top 50 - Global | VibezStream</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="./assetsnew/logo.jpg">
+    <link rel="stylesheet" href="playlist.css">
+</head>
+<body>
+
+<div class="playlist-container">
+    <div class="playlist-header">
+        <img src="./assetsnew/card1img.jpeg" class="playlist-cover">
+        <div class="playlist-info">
+            <p class="playlist-type">PLAYLIST</p>
+            <h1>Top 50 – Global</h1>
+            <p class="description">Your daily updates of the most played tracks.</p>
+            <p class="stats"><b>VibezStream</b> • 50 songs</p>
+        </div>
+    </div>
+
+    <div class="song-list">
+        <div class="list-header">
+            <span>#</span>
+            <span>Title</span>
+            <span>Album</span>
+            <span>Time</span>
+        </div>
+        <hr class="separator">
+        <div id="songs-container"></div>
+    </div>
+</div>
+
+<!-- FIXED FOOTER -->
+<footer class="music-footer">
+    <div class="song-info">
+        <img id="footer-img" src="assetsnew/images.png">
+        <div>
+            <p class="song-name" id="footer-title">No song playing</p>
+            <p class="artist-name" id="footer-artist">---</p>
+        </div>
+    </div>
+
+    <div class="player-controls">
+         <audio id="audioPlayer" controls> </audio> 
+
+        
+    </div>
+
+    <div class="extra-controls">
+
+          <span class="material-symbols-outlined">slideshow</span>
+            
+                <span class="material-symbols-outlined">mic</span>
+
+                <span class="material-symbols-outlined">queue_music</span>
+            
+                <span class="material-symbols-outlined">speaker_group</span> 
+               
+               <div class="volume-control">
+                <span class="material-symbols-outlined">volume_up</span>
+                <input type="range" class="volume-slider">
+
+    </div>
+</footer>
+
+<script src="playlist.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px); /* Blur effect */
+}
+.login-card{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 40px;
+    border-radius: 20px;
+    width: 380px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+    outline: none;
+    border-color: #1db954;
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.2);
+    transform: scale(1.01);
+} 
+
+h2 {
+    color:white;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    
+    
+}
+
+input {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 12px 0;
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: #252525;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box; /* Important for alignment */
+    transition: 0.3s;
+}
+
+input:hover {
+    outline: none;
+    border-color: #1db954;
+    background: #333;
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.2);
+}
+.button-login{
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+    margin-top: 25px;
+}
+
+/* Primary Green Button */
+.btn-primary {
+    background-color: #1db954;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px;
+    border: 1px solid #727272;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 12px 0;
+
+}
+
+.btn-primary:hover {
+    background-color: #1ed760;
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
+}
+
+/* Secondary Ghost Button */
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px;
+    border: 1px solid #727272;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50%;
+
+}
+
+.btn-secondary:hover {
+    border-color: #ffffff;
+    transform: scale(1.03);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Click Animation for both */
+button:active {
+    transform: scale(0.97);
+}

@@ -1,0 +1,504 @@
+body {
+    
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  background-color:black;
+  color: #fff;
+  overflow: hidden;
+}
+
+ .main {
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+
+} 
+
+.sidebar {
+    background-color: black;
+    width: 280px;
+    border-radius: 1rem; /*16px*/
+    margin: 0.5rem;
+    padding-right: 0.25rem; 
+    padding-top: 0.25rem;
+    margin-top: -3px;
+
+ 
+}
+
+.main-content {
+    
+    background-color: #121212 ;
+    flex: 1;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem 0 1.5rem;
+    /* margin-top: 2px; */
+
+}  
+
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 72px;
+} 
+
+a {
+    text-decoration: none;
+    color: #fff;
+} 
+
+ .nav {
+    background-color: #121212;
+     border-radius: 1rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     height: 100px;
+     padding: 0.5rem 0.75rem;
+} 
+ 
+.nav-option {
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem  0.75rem;
+} 
+ 
+.nav-option:hover {
+    opacity:1;
+    
+} 
+ 
+.nav-option i {
+    font-size: 1rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.library {
+
+    background-color: #121212;
+    height: 100%;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}     
+
+.icons {
+    font-size: 1rem;
+    display: flex;
+}
+
+.icons i {
+    opacity: 0.5;
+    margin-right: 1rem;
+}
+
+.icons i:hover{
+    opacity: 1;
+    
+}
+
+.box {
+    background-color: #232323;
+    height: 7rem;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-p2 {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.badge {
+    background-color: white;
+    opacity: 0.8;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+
+.badge:hover{
+    opacity: 2;
+    height: 2rem;
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
+    
+}
+
+.box-2{
+    background-color: #232323;
+    height: 9rem;
+    border-radius: 0.75rem;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-2-p1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-2-p2 {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.dark-badge {
+    background-color: #000;
+    color: #fff;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index: 10;
+}
+
+.sticky-nav-icons img {
+   margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 1.5rem;
+}
+ 
+@media (max-width: 1000px){ /* it's for in main content div there are two buttons and when its wrap its size are change but not look like 
+                              attractive so we write this for well looking responsive*/
+    .hide {
+        display: none;
+    }
+} 
+
+.card{
+  
+    background-color: #232323;
+    width: 150px;
+    height: 280px; 
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.control-btn {
+    background: none; 
+    border: none;    
+    padding: 0.50rem;      
+    cursor: pointer;
+    line-height: 0; 
+}
+
+.control-btn img {
+        display: block;
+        font-size: 50px;
+        width: 20px; 
+        height: 20px;
+    }
+
+.main-control img { 
+    width: 30px; 
+    height: 30px;
+    object-fit: contain;
+    transition: transform 0.1s ease;
+}
+
+
+.control-btn:hover {
+    opacity: 0.8; 
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
+}
+
+.play-button {
+    position: absolute;
+    bottom: 12px;
+    top: 20px;
+    font-size: 50px;
+    color: #1bd764;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: translate(10px);
+}
+
+.play-button .material-symbols-outlined {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    display: flex;
+    margin-left: 120px;
+    margin-bottom: 115px;
+}
+
+.card:hover .play-button {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.card:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(29, 185, 84, 0.3);
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    border-radius: 0.5rem;
+} 
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+.card-info {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    width: 100%;
+    line-height: 1.2rem;
+}
+
+.footer {
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 80%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.music-player {
+    border: 1px solid #232323;
+    margin-left: -4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.album {
+    width: 25%;
+}
+
+.player {
+    width: 50%;
+}
+
+.controls {
+    width: 25%;
+    gap: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.play-toggle {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.play-toggle:hover {
+    transform: scale(1.15);
+    color: #1bd764;
+}
+
+
+.player-control-icon {
+    height: 1rem;
+    margin-right: 0.75rem;
+    opacity: 0.7;
+    
+}
+.player-control-icon:hover {
+    opacity: 1;
+  
+}
+
+.playback-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #1bd764 var(--progress), #ddd var(--progress));
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd764;
+    border-radius: 50%;
+    margin-top: -6px;
+
+}
+ .progress-bar {
+    width: 70%;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    --progress: 0%;
+}
+
+
+
+.album-image {
+  display: flex;
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.album-title {
+    justify-content: space-between;
+    font-weight: 400;
+    margin-left: 5rem;
+    margin-top: -3rem;
+    /* padding: 3rem; */
+}
+.album-info {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    font-weight: 400;
+    margin-left: 5rem;
+    margin-top: -1rem;
+}
+
+.material-symbols-outlined {
+    font-size: 1.25rem; 
+    color: #b3b3b3;    
+    cursor: pointer;
+    gap: 3rem;
+    margin-right: 10px;
+}
+
+/* Hover karne par white ho jayein */
+.material-symbols-outlined:hover {
+    color: #ffffff;
+    transform: scale(1.05); /* Thoda sa bada ho jaye */
+    gap: 3rem;
+}
+
+
+
+.controls-bar {
+    display: flex-end;
+    justify-items: center;
+    width: 30%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.controls-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.controls-bar::-webkit-slider-thumb {
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd764;
+    border-radius: 50%;
+    margin-top: -6px;
+   
+}
+
+.volume-control .volume-slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    width: 0;
+    margin-left: 0;
+}
+
+.volume-control:hover .volume-slider {
+    opacity: 1;
+    visibility: visible;
+    width: 70px;
+    margin-right: 1px;
+
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+}
